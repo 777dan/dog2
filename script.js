@@ -16,11 +16,7 @@ function Dog(name, breed, weight) {
         return age;
     };
     this.bark = function () {
-        if (this.weight < 25) {
-            alert(this.name + " сказал Тяф!");
-        } else {
-            alert(this.name + " сказав Гав!");
-        }
+        (this.weight < 25) ? alert(this.name + " сказал Тяф!") : alert(this.name + " сказав Гав!");
     };
     this.start = function () {
         speed = 1;
@@ -30,13 +26,8 @@ function Dog(name, breed, weight) {
     };
     this.changeSpeed = function (n) {
         this.start();
-        if (this.weight < 25) maxSpeed = 4;
-        else maxSpeed = 20;
-        if (n >= 0.5 && n <= maxSpeed) {
-            speed *= n;
-        } else {
-            alert("Щось пішло не так...")
-        }
+        maxSpeed = (this.weight < 25) ? 4 : 20;
+        (n >= 0.5 && n <= maxSpeed) ? speed *= n : alert("Щось пішло не так...");
         alert(speed);
     };
     this.toString = function () {
