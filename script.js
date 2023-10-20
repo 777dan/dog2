@@ -25,9 +25,9 @@ function Dog(name, breed, weight) {
         speed = 0;
     };
     this.changeSpeed = function (n) {
-        // this.start();
+        speed = 1;
         maxSpeed = (this.weight < 25) ? 4 : 20;
-        (n >= 0.5 && n <= maxSpeed) ? speed *= n : alert("Щось пішло не так...");
+        (n > 0 && n <= 2) ? speed *= n : alert("Щось пішло не так...");
         alert(speed);
     };
     this.toString = function () {
@@ -44,8 +44,8 @@ let dogs = [fido, fluffy, spot];
 for (let i = 0; i < dogs.length; i++) {
     // alert(dogs[i].getAge());
     // dogs[i].bark();
-    // dogs[i].changeSpeed(2);
-    alert(dogs[i]);
+    dogs[i].changeSpeed(2);
+    // alert(dogs[i]);
 }
 
 if (fido instanceof Dog) {
