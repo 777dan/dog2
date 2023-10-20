@@ -25,7 +25,7 @@ function Dog(name, breed, weight) {
         speed = 0;
     };
     this.changeSpeed = function (n) {
-        this.start();
+        // this.start();
         maxSpeed = (this.weight < 25) ? 4 : 20;
         (n >= 0.5 && n <= maxSpeed) ? speed *= n : alert("Щось пішло не так...");
         alert(speed);
